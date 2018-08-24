@@ -14,7 +14,6 @@ git clone https://github.com/El-Famoso/ShopifyTheme.git
 
 ## Prerequisites
 
-What things you need to install the software and how to install them
 
 ### Git
 
