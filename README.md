@@ -5,6 +5,14 @@ This repo stores the base theme for shopify theme dev.  Will be integrating proc
 
 ## Getting Started
 
+### If SSH has been set up
+**Copy & paste the following** into the terminal window and **hit `Return`**.
+
+```shell
+git clone git@github.com:El-Famoso/ShopifyTheme.git
+```
+
+### If SSH has *NOT* been set up
 **Copy & paste the following** into the terminal window and **hit `Return`**.
 
 ```shell
@@ -15,7 +23,7 @@ git clone https://github.com/El-Famoso/ShopifyTheme.git
 ## Prerequisites
 
 
-### Git
+### GIT
 
 #### Installing *Git* on a *Mac*
 
@@ -46,6 +54,11 @@ brew install git
 
 **You can use *Git* now.**
 
+### SSH
+
+> [Instructions for setting up ssh](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+> [Instructions for adding ssh key to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 ## Deployment
 
