@@ -56,26 +56,26 @@ $footer-heading-colour: #000000;
 $footer-text-colour: #000000;
 $footer-link-colour: #000000;
 
-$font-family-body: 'Montserrat',Helvetica, Arial, sans-serif;
+$font-family-body: 'Raleway',Helvetica, Arial, sans-serif;
 $font-weight-body: 400;
 $font-size-body: false;
 $font-transform-body: none;
 $font-body-italic: false;
 
-$font-family-heading: 'Montserrat',Helvetica, Arial, sans-serif;
+$font-family-heading: 'Raleway',Helvetica, Arial, sans-serif;
 $font-weight-heading: 700;
 $font-size-heading: false;
 $font-transform-heading: none;
 $font-heading-italic: false;
 $heading-letterpress: false;
 
-$font-family-navbar: 'Montserrat',Helvetica, Arial, sans-serif;
+$font-family-navbar: 'Raleway',Helvetica, Arial, sans-serif;
 $font-weight-navbar: 400;
 $font-size-navbar: false;
 $font-transform-navbar: none;
 $font-navbar-italic: false;
 
-$font-family-brand: 'Montserrat',Helvetica, Arial, sans-serif;
+$font-family-brand: 'Raleway',Helvetica, Arial, sans-serif;
 $font-weight-brand: 400;
 $font-size-brand: false;
 $font-transform-brand: uppercase;
@@ -449,7 +449,7 @@ body{
 	font-weight: $font-weight-body;
   
 	@if $site-background-image {
-		background-image: url('//cdn.shopify.com/s/files/1/2217/6221/t/3/assets/site-background-image-file.jpg?991628754108623134');
+		background-image: url('//cdn.shopify.com/s/files/1/2094/8289/t/10/assets/site-background-image-file.jpg?7560424183545798765');
 		background-repeat: inherit;
 		background-position: center center;
 		background-size: 100% auto;

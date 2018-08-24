@@ -13,11 +13,24 @@
 	{% if template contains 'index' or products-list == 'limit' %}
 	  {% if settings.homepage-products-limit contains 'unlimited' %}{% assign limit = nil %}{% else %}{% assign limit = settings.homepage-products-limit %}{% endif %}
 	{% endif %}
-	{% for p in product_collection.products | limit: limit %}
-    	<!-- Bold D&H //collection -->
-        {% if p.metafields.inventory.ShappifyHidden == "true" %}{% continue %}{% endif %}
-        <!-- //end collection D&H -->
-		{% assign product_count = forloop.length %}
-		{% include 'product-loop' with p %}
-	{% endfor %}
+  
+
+  {% if settings.move-out-of-stock-to-bottom %}
+    {% for p in product_collection.products | limit: limit %}
+      {% if p.available %}
+      {% include 'product-loop' with p %}
+      {% endif %}
+      {% endfor %}
+      {% for p in product_collection.products | limit: limit %}
+      {% unless p.available %}
+      {% include 'product-loop' with p %}
+      {% endunless %}
+    {% endfor %}
+  {% else %}
+      {% for p in product_collection.products | limit: limit %}
+          {% assign product_count = forloop.length %}
+          {% include 'product-loop' with p %}
+      {% endfor %}
+  {% endif %}
+  
 </div>

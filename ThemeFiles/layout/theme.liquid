@@ -11,7 +11,6 @@
 
     {{ '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' | script_tag }}
     {{ 'jquery.min.js' | asset_url | script_tag }}
-    {{ 'jquery.unveil.js' | asset_url | script_tag }}
     
     {{ '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js' | script_tag }}
 
@@ -39,6 +38,10 @@
     {% endif %}
 
     {{ content_for_header }}
+{{ 'bold-brain-widget.css' | asset_url | stylesheet_tag }}
+
+{%- include 'bold-common' -%}
+
 
     {% include 'theme-script-variables' %}
     {% include 'theme-variables' %}
@@ -80,18 +83,6 @@
     <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0914/9978/files/unnamed.png?681792909104386720" />
   {% endif %}
 {% endif %}
-    
-      <!-- jsDeliver -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.4/jquery.lazy.plugins.min.js"></script>
-
-    <!-- cdnjs -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.plugins.min.js"></script>
-    
-    <!-- Bold D&H //theme -->
-    {% if product.metafields.inventory.ShappifyHidden == "true" %} <meta name="robots" content="noindex"> {% endif %}
-    <!-- // end theme D&H -->
     
   </head>
 
@@ -168,7 +159,6 @@
   {{ 'typeahead.js' | asset_url | script_tag }}
   {{ 'jquery.instagram.min.js' | asset_url | script_tag }}
   {{ 'jquery.mobile.custom.js' | asset_url | script_tag }}
-  <!-- Mike   -->
   {{ 'jquery.popupoverlay.js' | asset_url | script_tag }} 
   {% if settings.enable-image-zoom %}{{ 'jquery.zoom.min.js' | asset_url | script_tag }}{% endif %}
   {% if settings.enable-image-lightbox %}{{ 'jquery.colorbox-min.js' | asset_url | script_tag }}{% endif %}
@@ -346,20 +336,8 @@
 	{% endif %}
 });
   </script>
-  <script>
-    $(document).ready(function() {
-      $("img.unveilme").unveil(0, function() {
-      $(this).load(function() {
-        this.style.opacity = 1;
-      });
-    });
-    });
-  </script>
+
   <input type="hidden" name="_pc_params" value="{{ shop.permanent_domain }}:{{ customer.id }}" />
-
-  
-  
-
 
 </body>
 </html>

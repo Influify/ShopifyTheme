@@ -1,9 +1,3 @@
-<!-- Bold D&H //product -->
-{% if product.metafields.inventory.ShappifyHidden == "true" %}
-Product is not available
-{% break %}{% endif %}
-<!-- // end product D&H -->
-
 {% if t_object != blank %}
 {% assign product = t_object %}
 {% endif %}
