@@ -1,6 +1,6 @@
 # El Famoso Base Shopify Theme
 
-This repo stores the base theme for shopify theme dev.  Will be integrating processes for pushing theme updates down to existing stores using this theme in the future.
+This repo stores the base theme for shopify theme dev.  Will be integrating processes for pushing theme updates down to existing stores using this repo in the future.
 
 
 ## Getting Started
